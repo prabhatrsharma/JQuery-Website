@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Header styles */
+        header {
+            background: linear-gradient(to right, #1100ff, #00d9ff); /* Gradient background */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 20px; /* Rounded ends */
+        }
+
+        /* Text color for the header */
+        #header-text {
+            color: rgb(58, 29, 138); /* Change the text color to white */
+            flex-grow: 1; /* Allow header text to take available space */
+        }
+
+        /* Button styles with gradient background */
+        #header-button {
+            background: linear-gradient(to bottom, #ae00ff, #ff3300); /* Apply gradient color to the button */
+            border: none;
+            color: white;
+            padding: 15px; /* Increase button height to fill the header */
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px; /* Add margin for spacing */
+            font-family: 'Poppins', sans-serif;
+            height:fit-content;
+        }
+
+        /* Hover effect for the button */
+        #header-button:hover {
+            background: linear-gradient(to bottom, #ff3300, #ff6600); /* Change the gradient color on hover */
+
+        }
+        .menu-container {
+            display: flex; /* Display items horizontally */
+            justify-content: space-around; /* Distribute items evenly */
+            padding: 20px; /* Add some padding for spacing */
+            color: #1100ff;
+            background: linear-gradient(to bottom, #ff3300, #ff6600); /* Change the gradient color on hover */
+        }
+
+        .menu-item {
+            background-color: #fbff00;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width:200px;
+            padding: 10px;
+            flex-grow: 1; /* Allow menu items to take up equal space */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            font-size:larger;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .image-container {
+            display: flex;
+            max-height: 70vh; /* Set a maximum height for the container */
+            margin: 0 auto; /* Center the container horizontally */
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        .image-container img {
+            width: 50%;
+            height: 50vh; /* 100% of viewport height */
+        }
+        </style>
+</head>
+<body>
+    <fieldset>
+    <header>
+        <h1 id="header-text">Prabhat's Stocks</h1>
+        <button id="header-button">Click me</button>
+    </header>
+    </fieldset>
+
+    <fieldset>
+        <div class="menu-container">
+            <div class="menu-item" id="equity">Equity</div>
+            <div class="menu-item" id="derivatives">Derivatives</div>
+            <div class="menu-item" id="share">Share</div>
+            <div class="menu-item" id="market">Market</div>
+            <div class="menu-item" id="total">Total</div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <fieldset>
+            <div class="menu-container">
+                <div class="menu-item-container" id="stock1-container">
+                    <div class="menu-item">
+                        <h6>NIFTY 50</h6>
+                        <h6>19725.05</h6>
+                        <h6>116.05 (59%)</h6>
+
+                    </div>
+
+
+                </div>
+                <div class="menu-item-container" id="stock2-container">
+                    <div class="menu-item">
+                        <h6>BITCOIN</h6>
+                        <h6>12345.05</h6>
+                        <h6>567.05 (59%)</h6>
+
+                    </div>
+                </div>
+                <div class="menu-item-container" id="stock3-container">
+                    <div class="menu-item">
+                        <h6>SHIBU 50</h6>
+                        <h6>34567.05</h6>
+                        <h6>345.05 (45%)</h6>
+
+                    </div>
+                </div>
+                <div class="menu-item-container" id="stock4-container">
+                    <div class="menu-item">
+                        <h6>ETHERNET 50</h6>
+                        <h6>2345.05</h6>
+                        <h6>123.05 (89%)</h6>
+
+                    </div>
+                </div>
+                <div class="menu-item-container" id="stock5-container">
+                    <div class="menu-item">
+                        <h6>GOLD 50</h6>
+                        <h6>5643.05</h6>
+                        <h6>908.05 (34%)</h6>
+
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        
+</fieldset>
+
+<fieldset>
+    <div class="image-container">
+        <img src="https://lh4.googleusercontent.com/OVnEMWIFN_bwoyiEGYu2xsFdTuG9pF4sR4k4-CTx9EN7zZ5Ee47dSWjaWwg4gLqchJoB7no18KEpxVXcaAAKvrVpuq_82lEoMj6D0Dg7gIxXNoiZ7kbEgMN81OA8ySNJArYGirhqYCTB1M9B_vC-jKvaNDCOZqEnNBq-j9OkZDCWRQhqMBZfSdr8vg" alt="Left Image" id="left-image">
+        <img src="https://149362354.v2.pressablecdn.com/wp-content/uploads/2020/04/How-to-Get-a-Low-Interest-Personal-Loan-in-India.png" alt="Image 1" id="image1">
+        <img src="https://viewst.com/static/4baa713bebe5f5fc8290365f5c99e50c/a8428/Construction_banner_2.png" alt="Image 2" id="image2">
+    </div>
+</fieldset>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+    
+            let image1Visible = true;
+            $("#image1").show();
+            $("#image2").hide();
+
+            $(".image-container").click(function () {
+                if (image1Visible) {
+                    $("#image1").hide();
+                    $("#image2").show();
+                } else {
+                    $("#image1").show();
+                    $("#image2").hide();
+                }
+                image1Visible = !image1Visible;
+            
+   // When hovering over the header text, change the text color
+   $("#header-text").hover(function () {
+                // Change text color to a different color (e.g., red)
+                $(this).css("color", "red");
+            }, function () {
+                // Revert text color to grey when the mouse leaves
+                $(this).css("color", "White");
+            });
+
+            // Handle button click event
+            $("#header-button").click(function () {
+                // Show an alert with the message "Welcome to Sudesh stocks"
+                alert("Welcome to Prabhat's stocks");
+
+
+
+            
+            });
+
+});
+        });
+
+    </script>
+</body>
+</html>
